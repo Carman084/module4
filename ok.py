@@ -5,3 +5,4 @@ def check_palindrom(word):
     else:
         return False 
 print(check_palindrom('лепсспел'))
+print(check_palindrom('Ок'))

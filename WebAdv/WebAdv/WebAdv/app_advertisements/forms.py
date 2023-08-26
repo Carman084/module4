@@ -16,9 +16,10 @@ class AdvertisementForm(forms.ModelForm):
     class Meta:
         model = Advertisement
         fields = ("title", "description", "image", "price", "auction")
-
+    
     def clean_title(self):
         title = self.cleaned_data['title']
         if title.startswith('?'):
             raise ValidationError('Заголовок не может начинаться с вопросительного знака.')
-        return title
+        else:
+            return title
